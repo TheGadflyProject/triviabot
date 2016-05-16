@@ -20,6 +20,7 @@ var choiceReactions = {
     2: ':three:',
     3: ':four:',
 }
+var sessionStorage;
 
 // Reply pattern library
 replies = {
@@ -122,7 +123,7 @@ controller.hears(['stop', 'Stop', 'STOP', 'stahp', 'STAHP'],
 controller.hears('start trivia now', ['ambient', 'direct_message'], function(bot, message) {
     async.series([
         function(callback) {postTriviaIntro(bot, message, callback);},
-        //function(callback) {getTriviaQuestions(callback);},
+        function(callback) {getTriviaQuestions(callback);},
         function(callback) {waitNSecs(5, callback);},
         function(callback) {bot.reply(message, "Let's go!"); callback(null);},
         function(callback) {bot.reply(message, "Question number one!"); callback(null);},
@@ -163,10 +164,9 @@ controller.on('reaction_added', function(bot, message) {
 
     console.log(message.reaction);
     if (message.reaction == "one" || message.reaction == "two" || message.reaction == "three" || message.reaction == "four") {
-        var targetMsg = fs.readFileSync('session.storage');
         var correct_answer = trivia_keys[message.item.ts].replace(":", "").replace(":", "");
         if (message.user != bot.identity.id &&
-            message.item.ts == targetMsg &&
+            message.item.ts == sessionStorage &&
             message.reaction == correct_answer) {
             trivia_answers.push(message);
         }
@@ -280,7 +280,7 @@ function addReactions(bot, message, callback) {
             console.log(err);
         }
         lastMsg = body.messages[0];
-        fs.writeFileSync('session.storage', lastMsg.ts, 'utf8');
+        sessionStorage = lastMsg;
         bot.api.reactions.add({
             timestamp: lastMsg.ts,
             channel: currentChannel,
