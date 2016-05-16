@@ -1,0 +1,16 @@
+{
+  "num_questions": 1,
+  "questions": [
+    {
+      "answer": "Francis Collins",
+      "answer_choices": [
+        "Joshua M. Dunn Sr",
+        "George Yancey",
+        "Martin Luther King Jr.",
+        "Francis Collins"
+      ],
+      "question": " ___________ is an evangelical Christian and famed geneticist who has led the Human Genome Project and the National Institutes of Health.",
+      "source_sentence": "Francis Collins is an evangelical Christian and famed geneticist who has led the Human Genome Project and the National Institutes of Health. "
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "num_questions": 0,
+  "questions": [
+  {
+      "answer": "Cruz",
+      "answer_choices": [
+        "Cruz",
+        "Perry",
+        "Clinton",
+        "Peters"
+      ],
+      "question": "With the assumption that the party's nomination would not be decided on the first convention ballot, Mr. ___________ spent considerable time this spring electing delegates favorable to him to the July convention in Cleveland.",
+      "source_sentence": "With the assumption that the party's nomination would not be decided on the first convention ballot, Mr. Cruz spent considerable time this spring electing delegates favorable to him to the July convention in Cleveland."
+    }
+  ]
+}

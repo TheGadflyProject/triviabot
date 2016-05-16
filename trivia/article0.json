@@ -1,0 +1,16 @@
+{
+  "num_questions": 1,
+  "questions": [
+    {
+      "answer": "Jimmy Carter",
+      "answer_choices": [
+        "Kazumi Matsui",
+        "Jimmy Carter",
+        "Bush",
+        "Shinzo Abe"
+      ],
+      "question": "Former President ___________ toured the Hiroshima memorial in May 1984, three years and four months after he left office, and Representative Nancy Pelosi, Democrat of California, visited the memorial in 2008 when she was speaker of the House.",
+     "source_sentence": "Former President Jimmy Carter toured the Hiroshima memorial in May 1984, three years and four months after he left office, and Representative Nancy Pelosi, Democrat of California, visited the memorial in 2008 when she was speaker of the House."
+   }
+  ]
+}
